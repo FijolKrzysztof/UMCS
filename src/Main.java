@@ -37,11 +37,26 @@ public class Main {
         loop.eventLoop();
     }
 
+    public static void testCustomException() {
+        try {
+            throw new CustomException("some message 123");
+        } catch (CustomException exception) {
+            System.out.println(exception);
+        }
+    }
+
+    public static void testStream() {
+        TestStream stream = new TestStream();
+        stream.doSomething();
+    }
+
     public static void main(String[] args) {
 //        testBuilder();
 //        testSingleton();
 //        testTxtFile();
 //        testCsvFile();
 //        testEventLoop();
+//        testCustomException();
+        testStream();
     }
 }
